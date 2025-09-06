@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for better typography */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-gray-50 text-gray-800; }
+  h1,h2,h3,h4 { @apply text-gray-900; }
+  a { @apply transition; }
+}
+
+/* Reusable container */
+@layer components {
+  .container-px { @apply max-w-6xl mx-auto px-4 sm:px-6; }
+  .btn-primary { @apply inline-flex items-center gap-2 bg-brand-green text-white px-5 py-3 rounded-2xl shadow hover:bg-emerald-700; }
+  .card { @apply bg-white rounded-2xl shadow-soft p-6; }
+}
