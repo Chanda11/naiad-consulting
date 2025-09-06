@@ -634,6 +634,9 @@ video {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -658,6 +661,12 @@ video {
 .h-7 {
   height: 1.75rem;
 }
+.h-0 {
+  height: 0px;
+}
+.h-0\.5 {
+  height: 0.125rem;
+}
 .min-h-\[70vh\] {
   min-height: 70vh;
 }
@@ -678,6 +687,9 @@ video {
 }
 .list-disc {
   list-style-type: disc;
+}
+.flex-col {
+  flex-direction: column;
 }
 .items-center {
   align-items: center;

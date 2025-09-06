@@ -13,20 +13,44 @@ export default function Header() {
         {/* Logo */}
         <h1 className="text-lg font-bold">Naiad Firm Dynamics Consulting</h1>
 
-        {/* Hamburger Button */}
+        {/* Hamburger / Close Button */}
         <button
           className="md:hidden block text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <svg
-            className="w-7 h-7"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <motion.div
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            className="flex flex-col justify-center items-center w-7 h-7"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-              d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+            {/* Top Line */}
+            <motion.span
+              variants={{
+                closed: { rotate: 0, y: 0 },
+                open: { rotate: 45, y: 6 },
+              }}
+              transition={{ duration: 0.3 }}
+              className="block h-0.5 w-6 bg-white mb-1"
+            />
+            {/* Middle Line */}
+            <motion.span
+              variants={{
+                closed: { opacity: 1 },
+                open: { opacity: 0 },
+              }}
+              transition={{ duration: 0.3 }}
+              className="block h-0.5 w-6 bg-white mb-1"
+            />
+            {/* Bottom Line */}
+            <motion.span
+              variants={{
+                closed: { rotate: 0, y: 0 },
+                open: { rotate: -45, y: -6 },
+              }}
+              transition={{ duration: 0.3 }}
+              className="block h-0.5 w-6 bg-white"
+            />
+          </motion.div>
         </button>
 
         {/* Desktop Menu */}
